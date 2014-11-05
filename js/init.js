@@ -75,11 +75,13 @@
 		});
 
 		function showMessage (message, type) {
-
+			$(".heading.message").data('message-type', type).html(message).fadeIn();
 		}
 
 		// Email API
 		$("form#hearFromYou").submit(function() {
+			// If message is there then hide it.
+			$(".heading.message").fadeOut();
 			$.ajax({
 				url: 'https://api.sendgrid.com/api/mail.send.json',
 				type: 'POST',
@@ -95,12 +97,12 @@
 				}
 			}).done(function(data) {
 				if (data.message == "success") {
-					console.log("Success");
+					showMessage("You'll hear back from us within 24 hours, Thanks.", "success");
 				} else {
-					console.log("error");
+					showMessage("There was an error in sending email, Please try later.", "error");
 				}
 			}).fail(function() {
-				console.log("error");
+				showMessage("There was an error in sending email, Please try later.", "error");
 			});
 
 			return false;

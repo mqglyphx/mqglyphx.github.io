@@ -165,6 +165,22 @@
 				margin-top: -0.35em;
 			}
 
+			form .heading.message {
+				border-radius: 5px;
+				margin-top: 1em;
+				padding: 0 1em;
+				color: #FFF;
+			}
+
+			form .heading.message[data-message-type=error] {
+				background: #E0726C;
+			}
+
+			form .heading.message[data-message-type=success] {
+				background: #7FA96C;
+			}
+
+
 			form label
 			{
 				display: block;
@@ -500,6 +516,10 @@
 			.feature-list h3
 			{
 				color: #e97770 !important;
+			}
+
+			.feature-list .address {
+
 			}
 
 				.feature-list h3:before
