@@ -423,8 +423,8 @@
 			input[type="reset"].style3,
 			.button.style3
 			{
-				background: #2f333b url('images/overlay.png');
-				color: #fff;
+				background: #FFF url('images/overlay.png');
+				color: #E5756E;
 			}
 
 				input[type="button"].style3:hover,
@@ -432,7 +432,7 @@
 				input[type="reset"].style3:hover,
 				.button.style3:hover
 				{
-					background-color: #3f434b;
+					background-color: #EEE;
 				}
 
 				input[type="button"].style3:active,
@@ -594,6 +594,7 @@
 
 		.wrapper .title
 		{
+			font-family: "Quicksand", sans-serif;
 			position: absolute;
 			top: 0;
 			left: 50%;
@@ -657,6 +658,11 @@
 				color: #fff;
 			}
 
+			.wrapper.style1 a.button
+			{
+				color: #E5756E;
+			}
+
 		.wrapper.style2
 		{
 			background: #fff;
@@ -666,7 +672,6 @@
 			{
 				background: #fff;
 				color: #484d55;
-				font-family: "Quicksand", sans-serif;
 			}
 
 		.wrapper.style3
@@ -823,6 +828,46 @@
 			color: #eee;
 			color: rgba(255,255,255,0.5);
 			text-transform: uppercase;
+		}
+
+/*********************************************************************************/
+/* Intro                                                                         */
+/*********************************************************************************/
+
+	#intro
+	{
+	}
+
+		#intro > .style1
+		{
+		}
+
+		#intro > .style2
+		{
+			font-weight: 700;
+			color: #fff;
+			border-radius: 0.35em;
+			box-shadow: inset 0px 0px 1px 1px rgba(255,255,255,0.25);
+		}
+
+			#intro > .style2 a
+			{
+				color: inherit;
+				text-decoration: none;
+			}
+
+		#intro > .style3
+		{
+			text-align: left;
+		}
+
+		#intro > .heading {
+			padding-bottom: .5em;
+			font-size: 1.5em;
+		}
+
+		#intro .icon {
+			margin-right: 1em;
 		}
 
 /*********************************************************************************/
