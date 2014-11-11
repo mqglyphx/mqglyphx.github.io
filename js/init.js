@@ -75,7 +75,7 @@
 		});
 
 		function showMessage (container, message, type) {
-			container.find(".heading.message").data('message-type', type).html(message).fadeIn();
+			container.find(".heading.message").attr('data-message-type', type).html(message).fadeIn();
 		}
 
 		// Ask to get back in touch
