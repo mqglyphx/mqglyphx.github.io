@@ -28,7 +28,7 @@
 
 	h1,h2,h3,h4,h5,h6
 	{
-		font-family: "Droid Serif", sans-serif;
+		font-family: 'Titillium Web', sans-serif;
 		font-weight: 700;
 		color: #484d55;
 	}
@@ -606,7 +606,7 @@
 
 		.wrapper .title
 		{
-			font-family: "Droid Serif", sans-serif;
+			font-family: 'Titillium Web', sans-serif;
 			position: absolute;
 			top: 0;
 			left: 50%;
@@ -928,7 +928,7 @@
 	.widget h4,
 	.widget h5,
 	.widget h6 {
-		font-family: "Droid Serif", sans-serif;
+		font-family: 'Titillium Web', sans-serif;
 		font-weight: 700;
 	}
 
