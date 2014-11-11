@@ -84,8 +84,8 @@
 			$(".heading.message").fadeOut();
 			$.ajax({
 				url: 'https://api.sendgrid.com/api/mail.send.json',
-				type: 'POST',
-				crossDomain: true,
+				type: 'GET',
+				dataType: "jsonp",
 				data: {
 					api_user: "glyphx",
 					api_key: "rishibehal",

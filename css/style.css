@@ -523,7 +523,7 @@
 			}
 
 			.feature-list .address {
-
+				line-height: 1.2em;
 			}
 
 				.feature-list h3:before
@@ -728,6 +728,24 @@
 		{
 		}
 
+			#footer-wrapper .modal .row {
+				max-width: 100%;
+				margin-left: -25px;
+			}
+
+			#footer-wrapper .modal .btn {
+				border: 0;
+				font-family: "Open Sans", sans-serif;
+			}
+
+			#footer-wrapper .modal-content {
+				box-shadow: none;
+			}
+
+			.row.modal-row + .row.modal-row > * {
+				padding: 20px 0 0 50px;
+			}
+
 			#footer-wrapper form input[type="text"],
 			#footer-wrapper form input[type="email"],
 			#footer-wrapper form input[type="password"],
@@ -736,6 +754,15 @@
 			{
 				background: #ccc;
 				box-shadow: none;
+			}
+
+			#footer-wrapper .modal form input[type="text"],
+			#footer-wrapper .modal form input[type="email"],
+			#footer-wrapper .modal form input[type="password"],
+			#footer-wrapper .modal form select,
+			#footer-wrapper .modal form textarea
+			{
+				background: #EEE;
 			}
 
 			#footer-wrapper form input[type="text"]:focus,
