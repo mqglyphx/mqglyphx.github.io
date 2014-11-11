@@ -88,6 +88,7 @@
 				type: 'POST',
 				dataType: "jsonp",
 				data: {
+					format: "jsonp",
 					api_user: "glyphx",
 					api_key: "rishibehal",
 					to: "hi@glyphx.net",
@@ -103,8 +104,13 @@
 				} else {
 					showMessage($form, "There was an error in sending email, Please try later.", "error");
 				}
-			}).fail(function() {
-				showMessage($form, "There was an error in sending email, Please try later.", "error");
+			}).fail(function(data) {
+				// Error might happen becuase of jsonp format neglect those errors
+				if (data.status === 200 && data.statusText === "success") {
+					showMessage($form, "You'll hear back from us within 24 hours, Thanks.", "success");
+				} else{
+					showMessage($form, "There was an error in sending email, Please try later.", "error");
+				}
 			});
 
 			return false;
@@ -120,6 +126,7 @@
 				type: 'POST',
 				dataType: "jsonp",
 				data: {
+					format: "jsonp",
 					api_user: "glyphx",
 					api_key: "rishibehal",
 					to: "hi@glyphx.net",
@@ -135,8 +142,13 @@
 				} else {
 					showMessage($form, "There was an error in sending email, Please try later.", "error");
 				}
-			}).fail(function() {
-				showMessage($form, "There was an error in sending email, Please try later.", "error");
+			}).fail(function(data) {
+				// Error might happen becuase of jsonp format neglect those errors
+				if (data.status === 200 && data.statusText === "success") {
+					showMessage($form, "You'll hear back from us within 24 hours, Thanks.", "success");
+				} else{
+					showMessage($form, "There was an error in sending email, Please try later.", "error");
+				}
 			});
 
 			return false;
