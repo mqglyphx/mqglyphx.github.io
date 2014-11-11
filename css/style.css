@@ -374,6 +374,12 @@
 				color: #fff;
 			}
 
+			#requestDemo1.button.style1 {
+				border: 2px solid #E97770;
+				color: #FFF;
+				background: rgba(0, 0, 0, 0);
+			}
+
 				input[type="button"].style1:hover,
 				input[type="submit"].style1:hover,
 				input[type="reset"].style1:hover,
@@ -382,11 +388,19 @@
 					background-color: #f98780;
 				}
 
+				#requestDemo1.button.style1:hover {
+					background-color: #f98780;
+				}
+
 				input[type="button"].style1:active,
 				input[type="submit"].style1:active,
 				input[type="reset"].style1:active,
 				.button.style1:active
 				{
+					background-color: #d96760;
+				}
+
+				#requestDemo1.button.style1:active {
 					background-color: #d96760;
 				}
 
