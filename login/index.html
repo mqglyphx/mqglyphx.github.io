@@ -2,7 +2,7 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <link rel="icon" href="../favicon.png">
-        <link rel="stylesheet" href="../css/bootstrap.css" media="screen" charset="utf-8">
+        <link rel="stylesheet" href="../css/bootstrap.min.css" media="screen" charset="utf-8">
         <title>GlyphX | Login</title>
         <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,400italic,700" type="text/css">
         <style media="screen">
@@ -141,6 +141,12 @@
                 border-radius: 0;
             }
 
+            #base_main .btn {
+              font-family: "Open Sans", sans-serif;
+              background-color: #E97770;
+              border: 0;
+            }
+
             .message {
                 line-height: 34px;
                 cursor: pointer;
@@ -170,7 +176,7 @@
                         </div>
                         <div class="form-group submit">
                             <span class="message">Entered email and password is not valid.</span>
-                            <input type="submit" class="btn btn-primary pull-right btn-login" value="Login">
+                            <input type="submit" class="btn btn-primary btn-lg pull-right btn-login" value="Login">
                         </div>
                     </form>
                 </div>
