@@ -168,7 +168,7 @@
 								<h3 class="heading">We would love to hear from you</h3>
 								<div class="row half">
 									<div class="6u">
-										<input type="text" name="name" id="contact-name" placeholder="Your Name" required/>
+										<input type="text" pattern="^[ ]*[A-Za-z]+[A-Za-z ]*$" name="name" id="contact-name" placeholder="Your Name" required/>
 									</div>
 									<div class="6u">
 										<input type="email" name="email" id="contact-email" placeholder="Your Email"  required pattern="[\w\.=-]+@(?!.*hotmail|outlook|gmail|yahoo|rediff|rediffmail|ymail|rocketmail).[\w.-]+\.[\w]{2,3}" title="Please put your organizational email address here."/>
@@ -176,7 +176,7 @@
 								</div>
 								<div class="row half">
 									<div class="12u">
-										<input type="text" name="phone" id="contact-number" placeholder="Phone" required/>
+										<input type="text" name="phone" id="contact-number" placeholder="Phone" pattern="^[ ]?[+]?[0-9 -.()]+$" required/>
 									</div>
 								</div>
 								<div class="row half">
@@ -206,7 +206,7 @@
 							            <div class="modal-body">
 												<div class="row modal-row">
 													<div class="6u">
-														<input type="text" name="name" id="request-demo-name" placeholder="Your Name" required />
+														<input type="text" name="name" id="request-demo-name" placeholder="Your Name" pattern="^[ ]*[A-Za-z]+[A-Za-z ]*$" title="Only alphabets are allowed" required />
 													</div>
 													<div class="6u">
 														<input type="email" name="email" id="request-demo-email" placeholder="Your Email"  required pattern="[\w\.=-]+@(?!.*hotmail|outlook|gmail|yahoo|rediff|rediffmail|ymail|rocketmail).[\w.-]+\.[\w]{2,3}" title="Please put your organizational email address here."/>
@@ -214,7 +214,7 @@
 												</div>
 												<div class="row modal-row">
 													<div class="12u">
-														<input type="text" name="phone" id="request-demo-phone" placeholder="Your Phone Number" required />
+														<input type="text" name="phone" id="request-demo-phone" placeholder="Your Phone Number" pattern="^[ ]?[+]?[0-9 -.()]+$" required />
 													</div>
 												</div>
 												<div class="row modal-row">
