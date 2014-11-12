@@ -744,9 +744,24 @@
 				margin-left: -25px;
 			}
 
+			#footer-wrapper .modal-title,
+			#footer-wrapper .close  {
+				color: #E97770;
+			}
+
+			#footer-wrapper .close {
+				opacity: 1;
+			}
+
+			#footer-wrapper .close:hover,
+			#footer-wrapper .modal .btn:hover {
+				opacity: .9;
+			}
+
 			#footer-wrapper .modal .btn {
 				border: 0;
 				font-family: "Open Sans", sans-serif;
+				background-color: #E97770;
 			}
 
 			#footer-wrapper .modal-content {
