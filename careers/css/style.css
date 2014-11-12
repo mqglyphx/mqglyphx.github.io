@@ -19,8 +19,37 @@ body, input, select, textarea {
 
 #intro-wrapper {
 	padding: 2em;
-	background: #EEE;
+	background: #F3F3F3 url('../../css/images/overlay.png');
 }
+
+/*********************************************************************************/
+/* Icons                                                                         */
+/*********************************************************************************/
+
+	.icon {
+		text-decoration: none;
+	}
+
+		.icon:before {
+			display: inline-block;
+			font-family: FontAwesome;
+			font-size: 1.25em;
+			text-decoration: none;
+			font-style: normal;
+			font-weight: normal;
+			line-height: 1;
+			-webkit-font-smoothing:antialiased;
+			-moz-osx-font-smoothing:grayscale;
+		}
+
+		.icon-social:before {
+			width: 1.2em;
+		}
+
+		.icon > .label {
+			display: none;
+		}
+
 
 /*********************************************************************************/
 /* Job description Widgets                                                                    */
@@ -83,7 +112,7 @@ body, input, select, textarea {
 	}
 
 	.widget .skills-checklist {
-		margin-left: 3.5em;
+		margin-left: 1.5em;
 	}
 
 	.widget .actions {
@@ -101,4 +130,16 @@ body, input, select, textarea {
 
 	.widget .actions .button:hover {
 		background-color: #DDD;
+	}
+
+	.widget li > ul {
+		list-style: none;
+	}
+
+	.widget li .icon {
+		margin-right: .5em;
+	}
+
+	.widget .btn {
+		background-color: #E97770;
 	}

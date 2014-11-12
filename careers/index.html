@@ -8,14 +8,74 @@
 		<link rel="icon" href="../favicon.png">
 		<link rel="stylesheet" type="text/css" href="../css/skel.css">
 		<link rel="stylesheet" type="text/css" href="../css/style.css">
-		<link rel="stylesheet" type="text/css" href="../css/style-mobile.css">
-		<link rel="stylesheet" type="text/css" href="../css/style-1000px.css">
 		<link rel="stylesheet" type="text/css" href="../css/style-desktop.css">
+		<link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
+		<link rel="stylesheet" type="text/css" href="../../css/font-awesome.min.css">
 		<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,400italic,700" type="text/css">
 		<link href='http://fonts.googleapis.com/css?family=Titillium+Web' rel='stylesheet' type='text/css'>
 		<style>
 		body {
-			background: #E97770 url('../css/images/overlay.png');
+			width: 100%;
+			min-width: 100%;
+		}
+
+		#intro-wrapper {
+			padding: 2em;
+			max-width: 1200px;
+			margin: 0 auto;
+		}
+
+		body,
+		.wrapper.style1 {
+			background: #F3F3F3;
+		}
+
+		.wrapper.style1,
+		.wrapper.style1 h1,
+		.wrapper.style1 a {
+			color: #111;
+		}
+
+		a.open-position {
+			display: block;
+			background: rgba(221, 221, 221, 0.24);
+			width: 20em;
+			height: 3em;
+			border: 1px solid #CCC;
+			padding: 0 1em;
+			line-height: 3em;
+			text-align: center;
+			text-decoration: none;
+			letter-spacing: 1px;
+			margin: 0 auto;
+			margin-bottom: .8em;
+		}
+
+		a.open-position:hover {
+			background: rgba(221, 221, 221, 0.54);
+		}
+
+		a.open-position:active {
+			background: rgba(221, 221, 221, 0.74);
+		}
+
+		div.center {
+			text-align: center;
+		}
+
+		#intro .heading {
+			padding-bottom: .5em;
+			font-size: 1.5em;
+		}
+
+		#intro .style3 {
+			font-size: 13pt;
+			margin: 0 auto;
+			text-align: justify;
+		}
+
+		#intro .icon {
+			margin: 0;
 		}
 		</style>
 	</head>
@@ -38,13 +98,12 @@
 		</div>
 
 		<!-- Work With Us -->
-		<div id="intro-wrapper" class="wrapper style1" style="padding: 2em;">
-			<section id="intro" class="container">
-				<!-- <p class="style1">So in case you were wondering what this is all about ...</p>
-				<p class="style2">
-					Escape Velocity is a free responsive<br class="mobile-hide" />
-					site template by <a href="http://html5up.net" class="nobr">HTML5 UP</a>
-				</p> -->
+		<div id="intro-wrapper" class="wrapper style1">
+			<section id="intro" class="container-fluid">
+				<div class="center">
+					<h1 class="heading">Careers</h1>
+				</div>
+
 				<p class="style3">
 					You know the times you were left wondering why your Number Portability application took days to happen or when your bank account became operational a week after you applied for it, the programs we write resolve issues as these.
 				</p>
@@ -56,17 +115,17 @@
 				<p class="style3">
 					Check out the Applications we are working on, if the problems we are solving seem interesting, View our Current Vacancies.
 				</p>
-				<br>
-				<h1 class="heading">Interested in joining us?</h2>
-				<p class="style3">
-					We have openings for:
-				</p>
-				<ul>
-					<li><a href="frontend/">Front End Developer</a></li>
-					<li><a href="python/">Python Developer</a></li>
-					<li><a href="csharp/">C# Developer</a></li>
-				</ul>
-
+				<hr>
+				<div class="center">
+					<h1 class="heading">Interested in joining us?</h1>
+					<br>
+					<div class="open-positions">
+						<div><a class="open-position button" href="frontend/">Front End Developer <span title="Developer Position" class="icon fa-code"></span></a></div>
+						<div><a class="open-position button" href="python/">Python Developer <span title="Developer Position" class="icon fa-code"></span></a></div>
+						<div><a class="open-position button" href="csharp/">C# Developer <span title="Developer Position" class="icon fa-code"></span></a></div>
+					</div>
+				</div>
+				<hr>
 				<p class="style3">
 					If so, we’d like to hear from you. We’re building outstanding customer experience products and need you to help us build it the right way, drop your resume to <a href="mailto:careers@glyphx.net">careers[at]glyphx.net</a>.
 				</p>
