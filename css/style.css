@@ -164,6 +164,7 @@
 			}
 
 			form .heading.message {
+				display: none;
 				border-radius: 5px;
 				margin-top: 1em;
 				padding: 0 1em;
@@ -766,6 +767,10 @@
 
 			#footer-wrapper .modal-content {
 				box-shadow: none;
+			}
+
+			.row.modal-row + .row.modal-row > * {
+				padding-top: 15px;
 			}
 
 			#footer-wrapper form input[type="text"],
