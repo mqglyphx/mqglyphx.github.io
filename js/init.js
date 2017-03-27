@@ -74,35 +74,81 @@
 			detach: false
 		});
 
-		function showMessage (message, type) {
-			$(".heading.message").data('message-type', type).html(message).fadeIn();
+		function showMessage (container, message, type) {
+			container.find(".heading.message").attr('data-message-type', type).html(message).fadeIn();
 		}
 
-		// Email API
+		// Ask to get back in touch
 		$("form#hearFromYou").submit(function() {
+			var $form = $(this);
 			// If message is there then hide it.
-			$(".heading.message").fadeOut();
+			$form.find(".heading.message").fadeOut();
 			$.ajax({
 				url: 'https://api.sendgrid.com/api/mail.send.json',
 				type: 'POST',
+				dataType: "jsonp",
 				data: {
+					format: "jsonp",
 					api_user: "glyphx",
 					api_key: "rishibehal",
-					to: "hi@glyphx.net",
+					to: "glyphxmq@gmail.com",
 					toName: "Rishi Behal",
 					from: $("#contact-email").val(),
-					fromName: $("#contact-name").val(),
-					subject: $("#contact-name").val() + " is trying to contact you from glyphx.net",
-					text: $("#contact-message").val() + "\n\nPhone Number: " + $("#contact-number").val()
+					fromName: $form.find("#contact-name").val(),
+					subject: $form.find("#contact-name").val() + " is trying to contact you from glyphx.net",
+					text: $form.find("#contact-message").val() + "\n\nPhone Number: " + $form.find("#contact-number").val()
 				}
 			}).done(function(data) {
 				if (data.message == "success") {
-					showMessage("You'll hear back from us within 24 hours, Thanks.", "success");
+					showMessage($form, "You'll hear back from us within 24 hours, Thanks.", "success");
 				} else {
-					showMessage("There was an error in sending email, Please try later.", "error");
+					showMessage($form, "There was an error in sending email, Please try later.", "error");
 				}
-			}).fail(function() {
-				showMessage("There was an error in sending email, Please try later.", "error");
+			}).fail(function(data) {
+				// Error might happen becuase of jsonp format neglect those errors
+				if (data.status === 200 && data.statusText === "success") {
+					showMessage($form, "You'll hear back from us within 24 hours, Thanks.", "success");
+				} else{
+					showMessage($form, "There was an error in sending email, Please try later.", "error");
+				}
+			});
+
+			return false;
+		});
+
+		// Ask for demo
+		$("form#requestDemo").submit(function() {
+			var $form = $(this);
+			// If message is there then hide it.
+			$form.find(".heading.message").fadeOut();
+			$.ajax({
+				url: 'https://api.sendgrid.com/api/mail.send.json',
+				type: 'POST',
+				dataType: "jsonp",
+				data: {
+					format: "jsonp",
+					api_user: "glyphx",
+					api_key: "rishibehal",
+					to: "glyphxmq@gmail.com",
+					toName: "Rishi Behal",
+					from: $("#request-demo-email").val(),
+					fromName: $form.find("#request-demo-name").val(),
+					subject: $form.find("#request-demo-name").val() + " is requesting a demo from glyphx.net",
+					text: "Phone Number: " + $form.find("#request-demo-phone").val()
+				}
+			}).done(function(data) {
+				if (data.message == "success") {
+					showMessage($form, "You'll hear back from us within 24 hours, Thanks.", "success");
+				} else {
+					showMessage($form, "There was an error in sending email, Please try later.", "error");
+				}
+			}).fail(function(data) {
+				// Error might happen becuase of jsonp format neglect those errors
+				if (data.status === 200 && data.statusText === "success") {
+					showMessage($form, "You'll hear back from us within 24 hours, Thanks.", "success");
+				} else{
+					showMessage($form, "There was an error in sending email, Please try later.", "error");
+				}
 			});
 
 			return false;
