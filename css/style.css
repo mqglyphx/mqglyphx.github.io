@@ -1,6 +1,4 @@
 @charset 'UTF-8';
-@import url('http://fonts.googleapis.com/css?family=Open+Sans:300,400,400italic,700');
-@import url('http://fonts.googleapis.com/css?family=Quicksand');
 @import url('font-awesome.min.css');
 
 /*********************************************************************************/
@@ -30,7 +28,7 @@
 
 	h1,h2,h3,h4,h5,h6
 	{
-		font-family: "Quicksand", sans-serif;
+		font-family: 'Titillium Web', sans-serif;
 		font-weight: 700;
 		color: #484d55;
 	}
@@ -166,6 +164,7 @@
 			}
 
 			form .heading.message {
+				display: none;
 				border-radius: 5px;
 				margin-top: 1em;
 				padding: 0 1em;
@@ -376,6 +375,12 @@
 				color: #fff;
 			}
 
+			#requestDemo1.button.style1 {
+				border: 2px solid #E97770;
+				color: #FFF;
+				background: rgba(0, 0, 0, 0);
+			}
+
 				input[type="button"].style1:hover,
 				input[type="submit"].style1:hover,
 				input[type="reset"].style1:hover,
@@ -384,11 +389,19 @@
 					background-color: #f98780;
 				}
 
+				#requestDemo1.button.style1:hover {
+					background-color: #f98780;
+				}
+
 				input[type="button"].style1:active,
 				input[type="submit"].style1:active,
 				input[type="reset"].style1:active,
 				.button.style1:active
 				{
+					background-color: #d96760;
+				}
+
+				#requestDemo1.button.style1:active {
 					background-color: #d96760;
 				}
 
@@ -423,8 +436,8 @@
 			input[type="reset"].style3,
 			.button.style3
 			{
-				background: #2f333b url('images/overlay.png');
-				color: #fff;
+				background: #FFF url('images/overlay.png');
+				color: #E5756E;
 			}
 
 				input[type="button"].style3:hover,
@@ -432,7 +445,7 @@
 				input[type="reset"].style3:hover,
 				.button.style3:hover
 				{
-					background-color: #3f434b;
+					background-color: #EEE;
 				}
 
 				input[type="button"].style3:active,
@@ -513,13 +526,19 @@
 		{
 		}
 
+			.feature-list .now-process {
+				text-align: center;
+				font-size: 1.6em;
+				margin-bottom: 0;
+			}
+
 			.feature-list h3
 			{
 				color: #e97770 !important;
 			}
 
 			.feature-list .address {
-
+				line-height: 1.2em;
 			}
 
 				.feature-list h3:before
@@ -588,6 +607,7 @@
 
 		.wrapper .title
 		{
+			font-family: 'Titillium Web', sans-serif;
 			position: absolute;
 			top: 0;
 			left: 50%;
@@ -628,8 +648,7 @@
 		.wrapper.style1
 		{
 			background: #e97770 url('images/overlay.png');
-			color: #eee;
-			color: rgba(255,255,255,0.75);
+			color: #FFF;
 		}
 
 			.wrapper.style1 .title
@@ -651,6 +670,11 @@
 				color: #fff;
 			}
 
+			.wrapper.style1 a.button
+			{
+				color: #E5756E;
+			}
+
 		.wrapper.style2
 		{
 			background: #fff;
@@ -660,7 +684,6 @@
 			{
 				background: #fff;
 				color: #484d55;
-				font-family: "Quicksand", sans-serif;
 			}
 
 		.wrapper.style3
@@ -688,9 +711,6 @@
 		#header-wrapper:before
 		{
 			content: '';
-			position: absolute;
-			top: 0;
-			left: 0;
 			width: 100%;
 			height: 100%;
 			background: url('images/overlay.png');
@@ -700,7 +720,7 @@
 	{
 		background: #282b34 url('images/overlay.png');
 		color: #eee;
-		color: rgba(255,255,255,0.5);
+		padding-bottom: 0;
 	}
 
 		#footer-wrapper strong,
@@ -720,6 +740,39 @@
 		{
 		}
 
+			#footer-wrapper .modal .row {
+				max-width: 100%;
+				margin-left: -25px;
+			}
+
+			#footer-wrapper .modal-title,
+			#footer-wrapper .close  {
+				color: #E97770;
+			}
+
+			#footer-wrapper .close {
+				opacity: 1;
+			}
+
+			#footer-wrapper .close:hover,
+			#footer-wrapper .modal .btn:hover {
+				opacity: .9;
+			}
+
+			#footer-wrapper .modal .btn {
+				border: 0;
+				font-family: "Open Sans", sans-serif;
+				background-color: #E97770;
+			}
+
+			#footer-wrapper .modal-content {
+				box-shadow: none;
+			}
+
+			.row.modal-row + .row.modal-row > * {
+				padding-top: 15px;
+			}
+
 			#footer-wrapper form input[type="text"],
 			#footer-wrapper form input[type="email"],
 			#footer-wrapper form input[type="password"],
@@ -728,6 +781,15 @@
 			{
 				background: #ccc;
 				box-shadow: none;
+			}
+
+			#footer-wrapper .modal form input[type="text"],
+			#footer-wrapper .modal form input[type="email"],
+			#footer-wrapper .modal form input[type="password"],
+			#footer-wrapper .modal form select,
+			#footer-wrapper .modal form textarea
+			{
+				background: #EEE;
 			}
 
 			#footer-wrapper form input[type="text"]:focus,
@@ -820,6 +882,124 @@
 		}
 
 /*********************************************************************************/
+/* Intro                                                                         */
+/*********************************************************************************/
+
+	#intro
+	{
+	}
+
+		#intro > .style1
+		{
+		}
+
+		#intro > .style2
+		{
+			font-weight: 700;
+			color: #fff;
+			border-radius: 0.35em;
+			box-shadow: inset 0px 0px 1px 1px rgba(255,255,255,0.25);
+		}
+
+			#intro > .style2 a
+			{
+				color: inherit;
+				text-decoration: none;
+			}
+
+		#intro > .style3
+		{
+			text-align: left;
+		}
+
+		#intro > .heading {
+			padding-bottom: .5em;
+			font-size: 1.5em;
+		}
+
+		#intro .icon {
+			margin-right: 1em;
+		}
+
+		#intro .icon:before {
+			font-size: 1em;
+		}
+
+/*********************************************************************************/
+/* Job description Widgets                                                                    */
+/*********************************************************************************/
+
+.widget {
+	background: #FFF;
+	border-radius: 5px;
+	color: #000;
+	padding: 1em 2em;
+	margin-bottom: 1em;
+}
+
+	.widget .widget-title,
+	.widget h1,
+	.widget h2,
+	.widget h3,
+	.widget h4,
+	.widget h5,
+	.widget h6 {
+		font-family: 'Titillium Web', sans-serif;
+		font-weight: 700;
+	}
+
+	.widget .location {
+		font-size: .8em;
+	}
+
+	.widget .widget-title {
+		border-bottom: 1px solid #DDD;
+		padding-bottom: .5em;
+		margin-bottom: .5em;
+		font-size: 1.1em;
+	}
+
+	.widget .widget-body .heading,
+	.widget .style3 a {
+		color: #000;
+	}
+
+	.widget .widget-body .heading {
+		font-size: 1.1em;
+	}
+
+	.widget p,
+	.widget ul {
+		margin-bottom: 1em;
+	}
+
+	.widget .heading {
+		margin-bottom: .3em;
+	}
+
+	.widget .skills-checklist {
+		margin-left: 3.5em;
+	}
+
+	.widget .actions {
+		margin: 0;
+	}
+
+	.widget .actions .button {
+		padding: 0.5em;
+		height: 3em;
+		line-height: 2em;
+		width: initial;
+		display: inline-block;
+		background-color: #EEE;
+	}
+
+	.widget .actions .button:hover {
+		background-color: #DDD;
+	}
+
+
+/*********************************************************************************/
 /* Highlights                                                                    */
 /*********************************************************************************/
 
@@ -846,6 +1026,10 @@
 	margin-top: 3em;
 }
 
+#ytplayer {
+	max-width: 100%;
+}
+
 /*********************************************************************************/
 /* Features                                                                     */
 /*********************************************************************************/
@@ -856,8 +1040,8 @@
 }
 
 #features ul.forms-list {
-	margin: 0 0 0 3em;
-	list-style: initial;
+	list-style-type: disc;
+	margin-left: 1.8em;
 }
 
 /*********************************************************************************/
